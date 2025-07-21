@@ -18,7 +18,7 @@ public abstract class BaseId<T> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BaseId<?> baseId = (BaseId<?>) o;
-        return value.equals(baseId.value);
+        return Objects.equals(value, baseId.value);
     }
 
     @Override

@@ -35,7 +35,8 @@ public class RestaurantEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RestaurantEntity that = (RestaurantEntity) o;
-        return restaurantId.equals(that.restaurantId) && productId.equals(that.productId);
+        return Objects.equals(restaurantId, that.restaurantId) && 
+               Objects.equals(productId, that.productId);
     }
 
     @Override
